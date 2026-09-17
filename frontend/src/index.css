@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.active{
+  /* border: 1px solid gray; */
+  border-radius: 5px 8px;
+  box-shadow: 1px 1px 1px 1px black;
+  padding: 10px;
+}
