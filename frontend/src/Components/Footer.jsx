@@ -1,94 +1,51 @@
-import React from 'react'
-
+import React from "react";
+import "../index.css";
 const Footer = () => {
     return (
-        <div className="bg-[#b1b93f] flex flex-col items-center justify-around p-10 text-white">
-            <div className="flex flex-wrap justify-around px-15 py-40">
-                <div className="max-w-[20%]">
-                    <h1 className="font-bold pb-2 text-[20px]">
-                        FindState
-                    </h1>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor eaque aut deleniti eum voluptatem harum, 
-                    </p>
-                    <p>
-                        <span>※</span><span>※</span><span>※</span>
-                    </p>
+        <footer className="bg-[#b1b93f] text-white px-6 py-10">
+           
+            <div className=" max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 py-16 " >
+                
+                <div>
+                    <h1 className="font-bold text-[20px] pb-3"> FindState </h1>
+                    <p className="leading-6"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor eaque aut deleniti eum voluptatem harum. </p>
                 </div>
-                <div className="">
-                    <h1 className="font-bold pb-2 text-[20px]">
-                        Community
-                    </h1>
-                    <p>
-                        → search properties
-                    </p>
-                    <p>
-                        → For Agents
-                    </p>
-                    <p>
-                        → Reviews
-                    </p>
-                    <p>
-                        → FAQS
-                    </p>
-
+                
+                <div>
+                    <h1 className="font-bold text-[20px] pb-3"> Community </h1>
+                    <p>→ Search Properties</p>
+                    <p>→ For Agents</p>
+                    <p>→ Reviews</p>
+                    <p>→ FAQs</p>
                 </div>
-                <div className="ss">
-                    <h1 className="font-bold pb-2 text-[20px]">
-                        About Us
-                    </h1>
-                    <p>
-                        → Our Story
-                    </p>
-                    <p>
-                        → Meet the team
-                    </p>
-                    <p>
-                        → Carrers
-                    </p>
+                
+                <div>
+                    <h1 className="font-bold text-[20px] pb-3"> About Us </h1>
+                    <p>→ Our Story</p>
+                    <p>→ Meet the Team</p>
+                    <p>→ Careers</p>
                 </div>
-                <div className="ss">
-                    <h1 className="font-bold pb-2 text-[20px]">
-                        Company
-                    </h1>
-                    <p>
-                        → About Us
-                    </p>
-                    <p>
-                        → Press
-                    </p>
-                    <p>
-                        → Contact
-                    </p>
-                    <p>
-                        → Careers
-                    </p>
-
+                
+                <div>
+                    <h1 className="font-bold text-[20px] pb-3"> Company </h1>
+                    <p>→ About Us</p>
+                    <p>→ Press</p>
+                    <p>→ Contact</p>
+                    <p>→ Careers</p>
                 </div>
-                <div className="ss">
-                    <h1 className="font-bold pb-2 text-[20px]">
-                        Have a Questions?
-                    </h1>
-                    <p>
-                        203 fake st, mountain, hyderabad
-                    </p>
-                    <p>
-                        +91 9502993964
-                    </p>
-                    <p>
-                        info@yourdomain.com
-                    </p>
-                    <p>
-                        www.website.com
-                    </p>
-
+                
+                <div>
+                    <h1 className="font-bold text-[20px] pb-3"> Have a Question? </h1>
+                    <p>203 Fake St, Mountain, Hyderabad</p>
+                    <p>+91 9502993964</p>
+                    <p>info@yourdomain.com</p>
+                    <p>www.website.com</p>
                 </div>
             </div>
-            <div className="">
-                copyright @2026 All rights reserved 
-            </div>
-        </div>
-    )
-}
+           
+            <div className="border-t border-white/30 pt-6 text-center"> Copyright © 2026 All Rights Reserved </div>
+        </footer>
+    );
+};
 
-export default Footer
+export default Footer;

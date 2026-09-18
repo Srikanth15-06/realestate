@@ -1,14 +1,15 @@
 import React from 'react'
+import '../index.css'
 
 const HomeSearch = () => {
     return (
         <div>
-            <div className="flex justify-center items-center gap-4 py-25 flex-wrap">
-                <div className="flex flex-col">
-                    <span className='text-[1.2em] font-bold py-1'>Location</span>
+            <div className="flex  flex-wrap justify-center items-center gap-4 py-25 px-10 msearch tsearch">
+                <div className="flex flex-col tSearchSection">
+                    <span className='text-[1.2rem] font-bold py-1 '>Location</span>
                     <input className='border-[1px] rounded-[10px] pl-2 py-3' type='text' placeholder='City/Locality Name' />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col tSearchSection">
                     <span className='text-[1.2em] font-bold py-1'>Property Type</span>
                     <select className='border-[1px] rounded-[10px] pl-2 py-3' type='text' placeholder='City/Locality Name'>
                         <option value="">Property type</option>
@@ -19,7 +20,7 @@ const HomeSearch = () => {
                         <option value="Mixed-Use Plots">Mixed-use Plots</option>
                     </select>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col tSearchSection">
                     <span className='text-[1.2em] font-bold py-1'>Property Status</span>
                     <select className='border-[1px] rounded-[10px] pl-2 py-3' type='text' placeholder='City/Locality Name' >
                         <option value="">property status</option>
@@ -28,10 +29,10 @@ const HomeSearch = () => {
                         <option value="green">under construction</option>
                     </select>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col tSearchSection">
                     <span className='text-[1.2em] font-bold py-1'>Price Limit</span>
                     <select className='border-[1px] rounded-[10px] pl-2 py-3' type='text' placeholder='City/Locality Name' >
-                        <option value="">price Limit</option>
+                        <option value="">prictSearchSectione Limit</option>
                         <option value="red">below 10 lakhs</option>
                         <option value="blue">10-50 lakhs</option>
                         <option value="green">50-75 lakhs</option>

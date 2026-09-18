@@ -7,20 +7,20 @@ import { context } from '../Context/Context'
 
 const Blog = () => {
   const { blogData } = useContext(context)
-  
+
   const [currentPage, setCurrentPage] = useState(1)
 
   const cardsPerPage = 3;
 
-  const totalPages = Math.ceil(blogData.length/cardsPerPage);
+  const totalPages = Math.ceil(blogData.length / cardsPerPage);
 
-  const startIndex = (currentPage -1) * cardsPerPage;
-  const currentBlogs = blogData.slice(startIndex,startIndex+cardsPerPage);
+  const startIndex = (currentPage - 1) * cardsPerPage;
+  const currentBlogs = blogData.slice(startIndex, startIndex + cardsPerPage);
 
   return (
     <div>
-      <Header/>
-      <BlogBg/>
+      <Header />
+      <BlogBg />
 
       <div className="pt-10 h-[500px] flex flex-wrap justify-center gap-5 p-5 mt-8 pb-5 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide hide-scrollbar">
         {currentBlogs?.map((blog, index) => (
@@ -36,18 +36,25 @@ const Blog = () => {
               </div>
             </div>
           </div>
-
         ))}
       </div>
       <div className='flex justify-center items-center gap-2 py-8'>
-        <button onClick={()=>setCurrentPage((prev)=>Math.max(prev-1,1))} disabled={currentPage===1} className='px-4 py-2 rounded bg-gray-700 text-white disabled:bg-gray-300'>  ← </button>
+        <button onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))} disabled={currentPage === 1} className='px-4 py-2 rounded bg-gray-700 text-white disabled:bg-gray-300'>  ← </button>
 
-        {Array.from({length:totalPages},(_,index)=>(
-          <button key={index} onClick ={()=> setCurrentPage(index+1)}
-          className={`h-10 w-10 rounded ${currentPage===index+1?"bg-yellow-500 text-white":"bg-gray-200 hover:bg-gray-300"}`}>{index+1}</button>
-        ))}
+        {/* {Array.from({ length: totalPages }, (_, index) => (
+          <button key={index} onClick={() => setCurrentPage(index + 1)}
+            className={`h-10 w-10 rounded ${currentPage === index + 1 ? "bg-yellow-500 text-white" : "bg-gray-200 hover:bg-gray-300"}`}>{index + 1}</button>
+        ))} */}
 
-        <button onClick={()=>setCurrentPage((prev)=>Math.min(prev+1,totalPages))} disabled={currentPage===totalPages} className='px-4 py-2 rounded bg-gray-700 text-white disabled:bg-gray-300'> →</button>
+        <button onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))} disabled={currentPage === 1} className="px-4 py-2 rounded bg-gray-700 text-white disabled:bg-gray-300 disabled:cursor-not-allowed" > {currentPage-1} </button>
+
+        <span className="px-4 py-2 rounded bg-yellow-500 text-white font-bold">
+          {currentPage}
+        </span>
+
+        <button onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))} disabled={currentPage === totalPages} className="px-4 py-2 rounded bg-gray-700 text-white disabled:bg-gray-300 disabled:cursor-not-allowed" > {currentPage+1} </button>
+
+        <button onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))} disabled={currentPage === totalPages} className='px-4 py-2 rounded bg-gray-700 text-white disabled:bg-gray-300'> →</button>
       </div>
       <Footer />
     </div>
